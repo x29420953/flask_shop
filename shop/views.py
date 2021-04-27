@@ -272,7 +272,10 @@ def cart():
         return redirect(url_for("shop.cart"))
 
     if request.form.get("buy"):
-        return redirect(url_for("shop.checkout"))
+        if len(orders) == 0:
+            flash("Cart is empty")
+        else:
+            return redirect(url_for("shop.checkout"))
     return render_template("cart.html", orders=orders, total_price=total_price)
 
 
