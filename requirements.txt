@@ -4,3 +4,5 @@ pymysql
 Blueprint
 flask_login
 flask_uploads
+SQLAlchemy
+flask_wtf
