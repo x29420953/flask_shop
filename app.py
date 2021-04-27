@@ -20,5 +20,6 @@ app.register_blueprint(shop, url_prefix='/shop')
 def load_user(user_id):
     return User.query.get(user_id)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
