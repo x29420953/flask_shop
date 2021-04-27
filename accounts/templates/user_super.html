@@ -1,0 +1,24 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/accounts/static/css/user_super.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ User super{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "accounts_sidebar.html" %}
+        {% from "message/form_errors.html" import form_field_errors %}
+        <div class="blockright">
+            <form method="POST" action="">
+                {{ superform.csrf_token }}
+                <div>
+                    <h1>Information</h1>
+                    <div class="ip">
+                    {{ user.username }}
+                    </div>
+                    {{ superform.is_super }}
+                    {{ superform.enter }}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

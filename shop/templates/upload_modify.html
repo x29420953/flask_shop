@@ -1,0 +1,47 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/upload_modify.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Product Modify{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+        {% from "message/form_errors.html" import form_field_errors %}
+        <div class="blockright1">
+            <form method="POST" action="">
+            <button type="submit" class="bu" name="del" value="del">Delete</button>
+            <p>
+            <div class="divimg">
+                {% for imgurl in product.db_product_productimg %}
+                {% if imgurl.deleted_at == none %}
+                <img src={{ imgurl.url }}>
+                <input type="checkbox" name="check" value={{ imgurl.id }} style="zoom: 400%;">
+                {% endif %}
+                {% endfor %}
+            </div>
+            </form>
+        </div>
+        <div class="blockright">
+            <form method="POST" action="" enctype="multipart/form-data">
+                {{ productform.csrf_token }}
+                <div>
+                    <h1>Product Information</h1>
+                    {{ productform.name(value=product.name) }}
+                    {{ productform.content }}
+                    {{ productform.price(value=product.price) }}
+                    {{ productform.count(value=product.count) }}
+                    {{ productform.classify }}
+                    {{ productform.modifyimg }}
+                    {{ productform.upload }}
+                         
+                    {{ form_field_errors(productform.name.errors) }}
+                    {{ form_field_errors(productform.content.errors) }}
+                    {{ form_field_errors(productform.price.errors) }}
+                    {{ form_field_errors(productform.count.errors) }}
+                    {{ form_field_errors(productform.modifyimg.errors) }}
+                    {% include "message/flash_messages.html" %}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

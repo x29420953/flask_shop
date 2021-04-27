@@ -1,0 +1,33 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/upload.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Upload{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+        {% from "message/form_errors.html" import form_field_errors %}
+        <div class="blockright">
+            <form method="POST" action="{{ url_for('shop.upload') }}" enctype="multipart/form-data">
+                {{ productform.csrf_token }}
+                <div>
+                    <h1>Product Information</h1>
+                    {{ productform.name }}
+                    {{ productform.content }}
+                    {{ productform.price }}
+                    {{ productform.count }}
+                    {{ productform.classify }}
+                    {{ productform.img }}
+                    {{ productform.upload }}
+                         
+                    {{ form_field_errors(productform.name.errors) }}
+                    {{ form_field_errors(productform.content.errors) }}
+                    {{ form_field_errors(productform.price.errors) }}
+                    {{ form_field_errors(productform.count.errors) }}
+                    {{ form_field_errors(productform.img.errors) }}
+                    {% include "message/flash_messages.html" %}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

@@ -1,0 +1,15 @@
+<div class="divhr">
+    <div class="blockleft">
+        <div class="topright">
+            <a href="{{ url_for('shop.sports') }}" class="toprighta">Sports</a>
+            <a href="{{ url_for('shop.smart') }}" class="toprighta">Smart</a>
+            <a href="{{ url_for('shop.classic') }}" class="toprighta">Classic</a>
+            <a href="{{ url_for('shop.other') }}" class="toprighta">Other</a>
+            <a href="{{ url_for('shop.all') }}" class="toprighta">All</a> 
+            {% if current_user.is_super == 2 %}
+            <a href="{{ url_for('shop.management') }}" class="toprighta">Product</a>
+            <a href="{{ url_for('shop.total_order') }}" class="toprighta">Order</a> 
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/Product_management.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Product Management{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+        <div class="blockright">
+            <form method="POST" action="{{ url_for('shop.management') }}">
+                <table>
+                    <tr>
+                        <th width="80px">Number</th>
+                        <th width="300px">Name</th>
+                        <th width="500px">Content</th>
+                        <th width="90px">Price</th>
+                        <th width="80px">Count</th>
+                        <th width="80px">Size</th>
+                        <th width="80px">Color</th>
+                        <th width="90px">Classify</th>
+                        <th width="95px">
+                            <button type="submit" class="bu" name="ser" value="ser"><img src="/static/img/search_magnifying_glass_icon_149392.png"width=100%></button>
+                            <button type="submit" class="bu" name="add" value="add"><img src="/static/img/pen_edit_pencil_modify_icon_149413.png" width=100%></button>
+                        </th>
+                    </tr>
+                    {% for product in products.items %}
+                    <tr>
+                        <td>{{ product.id + 1000000 }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.content }}</td>
+                        <td>TWD {{ product.price }}</td>
+                        <td>{{ product.count }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>{{ product.color }}</td>
+                        <td>{{ product.classify }}</td>
+                        <td>
+                            <button type="submit" class="bu" name="mod" value={{ product.id }}><img src="/static/img/edit_modify_icon_149488.png" width=100%></button>
+                            <button type="submit" class="bu" name="del" value={{ product.id }}><img src="/static/img/trash_delete_remove_icon_149363.png" width=100%></button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <div class="page">
+                    {% for page in products.iter_pages() %}
+                        {% if page %}
+                            {% if page != products.page %}
+                                <a href="{{ url_for('shop.management', page=page) }}">{{ page }}</a>
+                            {% else %}
+                                <strong>{{ page }}</strong>
+                            {% endif %}
+                        {% else %}
+                            <span class=ellipsis>…</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

@@ -1,0 +1,54 @@
+{% block block_top %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block css%}{% endblock css%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock title%}</title>
+    {% block script%}{% endblock script%}
+</head>
+
+<body>
+    <div class="top">
+        <div class="topleft">
+            <a href="{{ url_for('shop.index') }}" class="toplefta">LEJ</a>
+        </div>
+        <div class="topright">
+            <a href="{{ url_for('accounts.aboutus') }}" class="toprighta"><img src="/static/img/circle_customer_help_info_information_service_support_icon_1232081.png" title="AboutUs"></a>
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('accounts.user') }}" class="toprighta"><img src="/static/img/account_avatar_face_man_people_profile_user_icon_123197.png" title="Account"></a>
+            {% else %}
+            <a href="{{ url_for('accounts.login') }}" class="toprighta"><img src="/static/img/avatar_male_man_people_person_profile_user_icon_1231991.png" title="Account"></a>
+            {% endif %}
+            <a href="{{ url_for('shop.cart') }}" class="toprighta"><img src="/static/img/bag_buy_cart_market_shop_shopping_tote_icon_1231911.png" title="Cart"></a>
+            <a href="{{ url_for('shop.all') }}" class="toprighta"><img src="/static/img/ecommerce_home_market_mart_shop_shopping_store_icon_1232071.png" title="OnlineShop"></a>
+        </div>
+    </div>
+{% endblock block_top %}
+
+{% block block_content %}
+{% endblock block_content %}
+
+{% block block_bottom %}
+<div class="bottom">
+    <div class="bottominfo">
+        <p>
+            LEJ, CEO: Jhong, Business License: 0000-0000, Address: Taiwan,Taipei, E-mail: ENJshop@gmail.com<br> Help
+            Center: +886 (00)0000-0000 (AM10 - PM05, Lunch PM01 - PM02, Weedend and Holiday Off)<br> All Photo by ⓒ
+            Pexels / H&M / ZARA / Garmin
+        </p>
+        <a href="https://www.facebook.com/"><img src="/static/img/Facebook_icon-icons.com_55914.png" title="Facebook" style="width: 2%;"></a>
+        <a href="https://www.instagram.com/"><img src="/static/img/social_media_instagram_ig_logo_icon_141109.png" title="Instagram" style="width: 2%;"></a>
+        <a href="https://line.me/zh-hant/"><img src="/static/img/social_media_line_logo_icon_141117.png" title="Line" style="width: 2%;"></a>
+        <a href="https://twitter.com/"><img src="/static/img/social_media_tumblr_logo_icon_141112.png" title="Twitter" style="width: 2%;"></a>
+        <a href="https://www.youtube.com/"><img src="/static/img/social_media_logo_youtube_logo_icon_141104.png" title="Youtube" style="width: 2%;"></a>
+        <a href="https://www.google.com.tw/"><img src="/static/img/social_media_location_pin_map_marker_logo_icon_141105.png" title="GoogleMap" style="width: 2%;"></a>
+    </div>
+</div>
+</body>
+
+</html>
+{% endblock block_bottom %}

@@ -1,0 +1,43 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/accounts/static/css/order.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Order{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "accounts_sidebar.html" %}
+        <div class="blockright">
+            <form method="POST" action="">
+                <table>
+                    <tr>
+                        <th width="50px">Order Number</th>
+                        <th width="150px">Order Status</th>
+                        <th width="90px">Total Price</th>
+                        <th width="90px">Total Count</th>
+                        <th width="90px">Recipient Name</th>
+                        <th width="200px">Recipient Address</th>
+                        <th width="80px">Recipient Phone</th>
+                        <th width="90px">Order Created</th>
+                        <th width="90px">Detail & Contact</th>
+                    </tr>
+                    {% for totalorder in totalorders %}
+                    <tr>
+                        <td>{{ totalorder.id + 1000000 }}</td>
+                        <td>{{ totalorder.status }}</td>
+                        <td>TWD {{ totalorder.total_price }}</td>
+                        <td>{{ totalorder.total_count }}</td>
+                        <td>{{ totalorder.name }}</td>
+                        <td>{{ totalorder.address }}</td>
+                        <td>{{ totalorder.phone }}</td>
+                        <td>{{ totalorder.created_at }}</td>
+                        <td>
+                            <button type="submit" class="bu" name="det" value={{ totalorder.id }}><img src="/static/img/pen_edit_pencil_modify_icon_149413.png"
+                                    width=100%></button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

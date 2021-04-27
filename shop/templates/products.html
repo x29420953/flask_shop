@@ -1,0 +1,65 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/products.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Product{% endblock title%}
+{% block script%}
+<script>
+    function insc() {
+        var maxcount = "{{ product.count }}"
+        var count = document.getElementById("count").value;
+        if (parseInt(count) < maxcount) {
+            document.getElementById("count").value = parseInt(count) + 1;
+        };
+    }
+    function dec() {
+        var count = document.getElementById("count").value;
+        if (parseInt(count) > 0) {
+            document.getElementById("count").value = parseInt(count) - 1;
+        };
+    }
+</script>
+{% endblock script%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+    
+            <div class="blockright1">
+                <div class="divimg">
+                    {% for imgurl in product.db_product_productimg %}
+                    {% if imgurl.deleted_at == none %}
+                    <img src={{ imgurl.url }}>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        
+        <form method="POST" action="">
+            {{ productbuyform.csrf_token }}
+            <div class="blockright2">
+                <div class="info">
+                    <div class="infotop">
+                        {{ product.name }}<p>
+                        TWD {{ product.price }}<p></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <button type="button" class="bu1" onclick="dec()">-</button>
+                        {{ productbuyform.count }}
+                        <button type="button" class="bu1" onclick="insc()">+</button>
+                        {{ productbuyform.addcart }}
+                    </div>
+                    {% include "message/flash_messages.html" %}
+                    <p>
+                    <div>
+                        Product number-{{ product.id + 1000000 }}
+                    </div>
+                    <p>
+                    <div>
+                        {{ product.content }}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock block_content %}

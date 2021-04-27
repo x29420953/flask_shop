@@ -1,0 +1,12 @@
+
+
+{% macro form_field_errors(err_list) %}
+    {% if err_list %}
+        {% for err in err_list %}
+            <div>
+                <p>{{ err }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+

@@ -1,0 +1,62 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/checkout.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ CheckOut{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+        {% from "message/form_errors.html" import form_field_errors %}
+        <div class="blockright">    
+            <div class="info">
+                <form method="POST" action="{{ url_for('shop.checkout') }}">
+                {{ buyform.csrf_token }}
+                <h1>Recipient information</h1>
+                {{ buyform.name }}
+                {{ buyform.address }}
+                {{ buyform.phone }}
+                <h5>Selecting "Complete Purchase" means you accept the LEJ terms and conditions
+                <p>
+                We will process your personal data in accordance with LEJ privacy notice.
+                </h5>
+                {{ buyform.buy }}
+                {{ form_field_errors(buyform.name.errors) }}
+                {{ form_field_errors(buyform.address.errors) }}
+                {{ form_field_errors(buyform.phone.errors) }}
+                {% include "message/flash_messages.html" %}
+                </form>
+            </div>
+        </div>
+        <div class="blockright1">
+            <div class="price">
+                <table>
+                    <tr>
+                        <td class="tdleft">Order value</td>
+                        <td class="tdright">TWD {{ total_price }}</td>
+                    </tr>
+                    <tr>
+                        <td class="tdleft">Delivery</td>
+                        <td class="tdright">Free</td>
+                    </tr>
+                </table>
+                <hr>
+                <table>
+                    <tr>
+                        <th class="tdleft">Total</th>
+                        <th class="tdright">TWD {{ total_price }}</th>
+                    </tr>
+                    <tr>
+                        <th class="tdleft">Total Count</th>
+                        <th class="tdright">{{ total_count }}</th>
+                    </tr>
+                </table>
+                <h6>
+                    The standard delivery time is 3 to 5 working days.
+                    We will deliver your package within 3-5 working days after receiving your order confirmation. All orders will be shipped
+                    from our warehouse, and you may experience a longer delivery time than expected. We provide delivery service from Monday
+                    to Friday. During peak seasons and sale periods, delivery may take longer.
+                </h6>
+            </div>
+        </div>
+    </div>
+{% endblock block_content %}

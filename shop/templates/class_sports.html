@@ -1,0 +1,25 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/shop/static/css/class_.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Sports{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "shop_sidebar.html" %}
+        <div class="blockright">
+            <form method="POST" action=""> 
+                {% for product in products %}
+                <div class="divimg">
+                    <div>
+                        <a href="{{ url_for('shop.products',id=product.id) }}"><img src={{ product.db_product_productimg[0].url }}></a>
+                    </div>
+                    <div class="info">
+                        {{ product.name }}<br>
+                        TWD {{ product.price }}
+                    </div>
+                </div>
+                {% endfor %}    
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

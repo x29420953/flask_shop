@@ -1,0 +1,49 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/accounts/static/css/login.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ Lonig{% endblock title%}
+{% block block_content %}
+    {% from "message/form_errors.html" import form_field_errors %}
+    <div class="middle">
+        <div class="divhr">
+            <div class="login-block">
+                <form method="POST" action="{{ url_for('accounts.login') }}">
+                    {{ loginform.csrf_token }}
+                    <div>
+                        <h1>Login</h1>
+                        {{ loginform.loginusername }} 
+                        {{ form_field_errors(loginform.loginusername.errors) }} 
+                        {% include "message/flash_messages.html" %}
+                        {{ loginform.loginpassword }} 
+                        {{ form_field_errors(loginform.loginpassword.errors) }}
+                        {{ loginform.login }}
+                    </div>
+                    <p>
+                        <a href="{{ url_for('accounts.verify_mail') }}">Forgot password</a>
+                </form>
+            </div>
+        </div>
+        <div class="login-block">
+            <form method="POST" action="{{ url_for('accounts.login') }}">
+                {{ registerform.csrf_token }}
+                <div>
+                    <h1>Register</h1>
+                    {{ registerform.username }} 
+                    {{ form_field_errors(registerform.username.errors) }} 
+                    {{ registerform.password }}
+                    {{ form_field_errors(registerform.password.errors) }}
+                    {{ registerform.confirm_password }} 
+                    {{ form_field_errors(registerform.confirm_password.errors )}} 
+                    {{ registerform.email }} 
+                    {{ form_field_errors(registerform.email.errors) }}
+                    {{ registerform.phone }}
+                    {{ form_field_errors(registerform.phone.errors) }} 
+                    {{ registerform.birth }} 
+                    {{ form_field_errors(registerform.birth.errors) }}
+                    {{ registerform.register }}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}

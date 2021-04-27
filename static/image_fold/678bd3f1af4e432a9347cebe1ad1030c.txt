@@ -1,0 +1,188 @@
+人格特質
+
+強烈學習意願
+良好邏輯思考
+足夠的溝通能力
+親和性 – 有禮貌、願意合作、相信他人、溫柔有同情心：預測團隊合作行為。
+外向性 – 喜愛交際、有活力、有自信、熱情
+情緒不穩定性 – 容易緊張、容易感到焦慮、情緒起伏較大
+盡責性 – 喜歡秩序、有條理、負責任、努力完成目標
+經驗開放性 – 好奇心；有想像力；喜歡嘗試新事物
+
+
+綜合題
+1. 可以說出幾個常用的 design pattern 並加以說明嗎？
+2. 為什麼要當工程師？
+3. 常用的學習方法有什麼？請列舉並嘗試說明是如何學習的
+4. 作為有經驗的工程師，請問你對程式工作的認知是什麼？有什麼技術上的目標？
+5. 可以說出一件最值得自豪的人生成就嗎？
+6. 寫程式的哪部份最讓你感到很興奮或是有興趣？
+7. 如果今年你能精通一項技術，那會是什麼？
+8. Pass by reference 與 Pass by value 的差別的什麼？
+
+Front-End
+Junior
+1. 對 UI 的追求，有美感嗎？有設計過嗎？
+2. 對 UX 有什麼想法？
+3. 說出三種能加快網頁讀取速度的方法 (感覺上的速度或是真正的讀取時間)。
+
+HTML
+1. doctype 做什麼用的？
+2. 試說明 Cookie、LocalStorage、SessionStorage 比較。
+3. 試說明 <script>, <script async> & <script defer> 之間的區別。
+
+CSS
+1. 垂直置中方法有幾種？
+2. 解釋 CSS 動畫與 JavaScript 動畫之間的憂與劣 ?
+3. CSS 的 class 和 ID 兩者有何差異？
+4. 你熟悉任何有關 SVG 嗎？
+5. 你使用過 grid system 嗎？如果有的話？你較推薦哪個？
+6. 使用 CSS preprocessors 的優點和缺點是什麼？ (Sass, Compass, Stylus, LESS) 描述你使用過的喜歡和不喜歡的 CSS preprocessors。
+7. Transition 與 Animation 差異比較？
+
+Javascript
+1.  請說明什麼是變數提升。var、let、const 的差異又是什麼？
+2. 非同步 Asynchronous、同步 Synchronous、Promise + Async/Await
+3. 描述 this 如何在 JavaScript 中運作?
+4. null、undefined和 undeclared變數之間有什麼差異？
+5. 描述 Function.prototype.bind?
+6. 解釋什麼是 single page app，並怎麼讓它對 SEO 更友善?
+
+Vue 
+1. 何為 mvvm？
+2. 請說明 vue 的生命周期？
+3. 試說明Vue組件間的參數傳遞方法。
+4. vuex是什麼？怎麼使用？哪種功能場景使用它？
+
+Senior
+1.你怎麼優化一個網站的靜態檔案 (assets) 和資源 (resources)？
+2. 有寫過測試嗎？寫測試有什麼好壞？都用什麼工具測試代碼是否能運作？
+3. Unit test 與integration test 的差別？
+4. 有哪些方法可改善網站在 scrolling 效能？
+5. 如何優化記憶體使用？
+
+Vue 
+1. 雙向數據綁定原理？
+2. 可以說明一下 Component-based Architecture 嗎？該如何分類 Compoment?
+
+Back-End
+Junior
+1. 了解什麼是 MVC 嗎？請試著用例子來說明 MVC？
+2. Restful API 設計，如 Create Todo List 的設計，可於白板上用任意方法表達。
+3. 對物件導向有了解嗎？可否列出主要三種特性並加以說明？
+4. 請說明 Server-side render。
+5. http status 302、403、500 分別代表什麼？
+6. 什麼是XSS? 什麼是CSRF? 什麼是 SQL Injection？
+7. Private / Public / Protected 差異？
+8. 試分別說明 Abstract Class ／ Interface。
+9. SESSION 與 COOKIE 的差別是什麼?
+
+
+
+PHP
+1.  請說明 echo 跟 print 的差異。
+
+Laravel
+1. 請說明 ServiceProvider 的作用？
+2. 如何設計排程？
+3. 
+
+SQL
+1. 試說明 Left Join、Inner Join、Right Join 的行為差異。
+2. 
+
+Senior
+1. 有了解過 SOLID 原則嗎？可以簡單說明各原則的目標是什麼？
+2. 請問有使用 Service 層與 Repository 層嗎？可以告訴這兩層的角色與作用是什麼嗎？
+3. 請簡述 TDD 的流程、優點與缺點。
+
+PHP
+1. 如何處理 API Validation？
+2. 若 Cookie 被禁用，如何讓 session 重新變有效？
+
+Laravel 
+1. IoC 容器是什麼？
+2. 
+3. 
+SQL
+1. SQL 優化方式
+2. Index 有什麼好處？
+3. 
+
+Redis
+1. Redis 如何實現持久化？
+
+Android
+1. activity fragment的生命週期
+2. JVM GC的原理
+3. mvvm與mvc的比較與差異
+4. Order of execution of Initialization blocks and Constructors in Java
+5. recycler view的應用，包含多種view type，載圖到cell上需要注意什麼
+6. activity或fragment之間資料的傳遞方式
+7. livedata
+8. 如何檢測memory leak
+
+演算法
+
+1. 能否在時間壓力下把問題簡化？
+2. 是否可以有效的定義規格並使用合理的資料結構？
+3. 是否可以考慮到輸入的各種狀況？
+4. 和他合作起來的感覺如何？
+
+
+1.  linked list
+Reverse a singly linked list.
+Example:
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+Follow up:
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+2.  Array
+Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example 1:
+Input: [1,2,3,1]
+Output: true
+Example 2:
+Input: [1,2,3,4]
+Output: false
+
+3.  Tree
+Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+   3
+   / \
+  9  20
+    /  \
+   15   7
+
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+4. Dynamic Programming
+
+You are climbing a staircase. It takes n steps to reach the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Example 1:
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+
+Example 2:
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step
+
+Constraints:
+1 <= n <= 45
+
+

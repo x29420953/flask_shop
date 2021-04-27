@@ -1,0 +1,99 @@
+        body {
+            background-color: rgb(199, 199, 199);
+        }
+        
+        .top {
+            padding: 25px 0 30px;
+            height: 100px;
+        }
+        
+        .toplefta {
+            margin: 0px 20px;
+            font-size: 80px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            text-decoration: none;
+            float: left;
+        }
+        
+        .toprighta {
+            margin: 20px 25px;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(73, 73, 73);
+            text-decoration: none;
+            float: right;
+        }
+        
+        .middle {
+            width: 100%;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 0.2fr 1fr;
+            margin: 0;
+        }
+        
+        .blockleft {
+            margin: 0 auto;
+            width: 200px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .blockright {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .bu {
+            width: 42px;
+            height: 42px;
+            font-size: 24px;
+            outline-style: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgb(175, 175, 175);
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .bu:hover {
+            background-color: #818181;
+            color: white;
+        }
+        
+        .bottominfo {
+            padding: 30px 15px 10px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(73, 73, 73);
+            text-decoration: none;
+        }
+        
+        .bottominfo a {
+            color: rgb(73, 73, 73);
+            text-decoration: none;
+        }
+        
+        .divhr {
+            border-right-style: double;
+            border-color: #8d8d8d;
+        }
+
+        table {
+            border-collapse:separate;
+            width: 100%;
+            font-size: 20px;
+        }
+        tr {
+            text-align: center;
+        }
+        th {
+            padding: 10px;
+        }
+        tr:nth-child(odd) {
+            background: #b1b1b1
+        }

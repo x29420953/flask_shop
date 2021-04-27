@@ -1,0 +1,45 @@
+﻿{% extends "base.html" %}
+{% block css%}
+<link href="/accounts/static/css/user_management.css" rel="stylesheet" type="text/css">
+{% endblock css%}
+{% block title %}LEJ User Management{% endblock title%}
+{% block block_content %}
+    <div class="middle">
+        {% include "accounts_sidebar.html" %}
+        <div class="blockright">
+            <form method="POST" action="{{ url_for('accounts.management') }}">
+                <table>
+                    <tr>
+                        <th width="200px">Username</th>
+                        <th width="200px">Email</th>
+                        <th width="110px">Phone</th>
+                        <th width="110px">Birth</th>
+                        <th width="110px">Created_at</th>
+                        <th width="110px">Update_at</th>
+                        <th width="110px">Deleted_at</th>
+                        <th width="90px">is_super</th>
+                        <th width="80px"></th>
+                    </tr>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.birth }}</td>
+                        <td>{{ user.created_at }}</td>
+                        <td>{{ user.update_at }}</td>
+                        <td>{{ user.deleted_at }}</td>
+                        <td>{{ user.is_super }}</td>
+                        <td>
+                            <button type="submit" class="bu" name="mod" value={{ user.id }}><img src="/static/img/edit_modify_icon_149488.png" width=100%></button>
+                            {% if user.is_super != 2 %}
+                            <button type="submit" class="bu" name="del" value={{ user.id }}><img src="/static/img/trash_delete_remove_icon_149363.png" width=100%></button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock block_content %}
