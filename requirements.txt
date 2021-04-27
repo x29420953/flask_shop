@@ -2,3 +2,5 @@ Flask
 gunicorn
 pymysql
 Blueprint
+flask_login
+flask_uploads
