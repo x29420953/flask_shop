@@ -6,3 +6,4 @@ flask_login
 flask_uploads
 flask_sqlalchemy
 flask_wtf
+wtforms
