@@ -20,6 +20,7 @@
                         <th width="200px">Recipient Address</th>
                         <th width="60px">Recipient Phone</th>
                         <th width="70px">Order Created</th>
+                        <th width="70px">Order Updated</th>
                         <th width="90px">
                             <button type="submit" class="bu" name="ser" value="ser"><img src="/static/img/search_magnifying_glass_icon_149392.png"
                                     width=100%></button>
@@ -35,6 +36,7 @@
                         <td>{{ totalorder.address }}</td>
                         <td>{{ totalorder.phone }}</td>
                         <td>{{ totalorder.created_at }}</td>
+                        <td>{{ totalorder.update_at }}</td>
                         <td>
                             <button type="submit" class="bu1" name="det" value={{ totalorder.id }}><img
                                     src="/static/img/pen_edit_pencil_modify_icon_149413.png" width=100%></button>

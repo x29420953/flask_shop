@@ -70,8 +70,8 @@ class UpdataForm(FlaskForm):
         "class": "ip", "placeholder": " Birth", "required": "required"
         }, validators=[validate_birth])
 
-    enter = SubmitField("Updata",render_kw={
-        "class": "bu", "placeholder": "Updata"})
+    enter = SubmitField("Update",render_kw={
+        "class": "bu", "placeholder": "Update"})
 
 
 class SuperForm(FlaskForm):

@@ -313,7 +313,6 @@ def checkout():
         for order in orders:
             order.total_order_id = totalorder.id
             order.deleted_at = datetime.datetime.now()
-            order.product.count -= order.count
         db.session.commit()
         return redirect(url_for("accounts.order"))
 

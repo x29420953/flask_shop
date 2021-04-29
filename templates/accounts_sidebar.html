@@ -3,7 +3,7 @@
         <div class="topright">
             <a href="{{ url_for('accounts.user') }}" class="toprighta">Profile</a>
             <a href="{{ url_for('accounts.order') }}" class="toprighta">Order</a>
-            <a href="{{ url_for('accounts.logout') }}" class="toprighta">OutLogin</a>
+            <a href="{{ url_for('accounts.logout') }}" class="toprighta">Sign Out</a>
             {% if current_user.is_super == 2 %}
             <a href="{{ url_for('accounts.management') }}" class="toprighta">User</a>
             {% endif %}
