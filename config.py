@@ -4,5 +4,6 @@ class Config(object):
     WTF_CSRF_SECRET_KEY = "My Key"
     SECRET_KEY = "Your Key"
     SQLALCHEMY_POOL_RECYCLE = 90
+    
     #mysql://b1ad405ad73ea5:25c66eb7@us-cdbr-east-03.cleardb.com/heroku_637d5fce379a2f7?reconnect=true
     #mysql+pymysql://root:88888888@127.0.0.1:3307/shop
