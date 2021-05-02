@@ -3,8 +3,9 @@
         }
         
         .top {
-            padding: 25px 0 30px;
-            height: 100px;
+            padding: 25px 5vw 50px 5vw;
+            height: 5vw;
+            width: 90%;
         }
         
         .toplefta {
@@ -26,50 +27,15 @@
         }
         
         .middle {
-            width: 100%;
+            width: 90%;
             margin-top: 50px;
-            margin: 0;
-            text-align: center;
-        }
-        
-        .login-block {
             margin: 0 auto;
-            height: 580px;
-            width: 300px;
             text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        
-        .loginip {
-            width: 300px;
-            height: 40px;
-            font-size: 24px;
-            outline-style: none;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: rgb(175, 175, 175);
-        }
-        
-        .loginbu {
-            width: 307px;
-            height: 42px;
-            font-size: 24px;
-            outline-style: none;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: rgb(175, 175, 175);
-            -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        
-        .loginbu:hover {
-            background-color: #818181;
-            color: white;
         }
         
         .bottominfo {
-            padding: 30px 15px 10px;
+            padding: 60px 5vw 5px 5vw;
+            width: 90%;
             font-size: 20px;
             font-family: 'Courier New', Courier, monospace;
             color: rgb(73, 73, 73);

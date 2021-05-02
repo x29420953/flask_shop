@@ -95,7 +95,8 @@
         }
         
         .bottominfo {
-            padding: 30px 15px 10px;
+            padding: 60px 5vw 5px 5vw;
+            width: 90%;
             font-size: 20px;
             font-family: 'Courier New', Courier, monospace;
             color: rgb(73, 73, 73);

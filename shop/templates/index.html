@@ -6,43 +6,61 @@
 {% block block_content %}
     <div class="middle">
         <div class="twoimg">
+            {% if products[0] %}
             <div class="divimg1">
                 <a href="{{ url_for('shop.products',id=products[0].id) }}"><img src={{ products[0].db_product_productimg[0].url }}></a>
             </div>
-            <div class="divimg1">
+            {% endif %}
+            {% if products[1] %}
+            <div class="divimg1">              
                 <a href="{{ url_for('shop.products',id=products[1].id) }}"><img src={{ products[1].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
         </div>
         <div class="oneimg">
-            <div class="divimg">
+            {% if products[2] %}
+            <div class="divimg">   
                 <a href="{{ url_for('shop.products',id=products[2].id) }}"><img src={{ products[2].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
         </div>
         <div class="oneimg">
+            {% if products[3] %}
             <div class="divimg">
                 <a href="{{ url_for('shop.products',id=products[3].id) }}"><img src={{ products[3].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
         </div>
         <div class="twoimg">
+            {% if products[4] %}
             <div class="divimg1">
                 <a href="{{ url_for('shop.products',id=products[4].id) }}"><img src={{ products[4].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
+            {% if products[5] %}
             <div class="divimg1">
                 <a href="{{ url_for('shop.products',id=products[5].id) }}"><img src={{ products[5].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
         </div>
         <div class="twoimg">
+            {% if products[6] %}
             <div class="divimg1">
                 <a href="{{ url_for('shop.products',id=products[6].id) }}"><img src={{ products[6].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
+            {% if products[7] %}
             <div class="divimg1">
                 <a href="{{ url_for('shop.products',id=products[7].id) }}"><img src={{ products[7].db_product_productimg[0].url }}></a>
             </div>
+            {% endif %}
         </div>
         <div class="oneimg">
-            <div class="divimg">
-                <a href="{{ url_for('shop.products',id=products[8].id) }}"><img src={{ products[8].db_product_productimg[0].url }}></a>
+            {% if products[8] %}
+            <div class="divimg">  
+                <a href="{{ url_for('shop.products',id=products[8].id) }}"><img src={{ products[8].db_product_productimg[0].url }}></a>       
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock block_content %}
