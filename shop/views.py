@@ -342,7 +342,7 @@ def total_order(page=1):
 
 @shop.route("/total_order_search/<id>", methods=["GET", "POST"])
 @shop.route("/total_order_search/<id>/<int:page>/", methods=["GET", "POST"])
-def allorder_search(id, page=1):
+def total_order_search(id, page=1):
     totalorders = TotalOrder.query.filter_by(id=id).order_by(
         TotalOrder.id.desc()).paginate(page, 10, False)
     if request.form.get("det"):

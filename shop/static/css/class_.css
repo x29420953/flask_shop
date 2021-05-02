@@ -3,8 +3,9 @@
         }
         
         .top {
-            padding: 25px 0 30px;
-            height: 100px;
+            padding: 25px 5vw 50px 5vw;
+            height: 5vw;
+            width: 90%;
         }
         
         .toplefta {
@@ -26,26 +27,27 @@
         }
         
         .middle {
-            width: 100%;
+            width: 90%;
             margin-top: 50px;
             display: grid;
-            grid-template-columns: 0.2fr 1fr;
-            margin: 0;
+            grid-template-columns: 0.1fr 1fr;
+            margin: 0 auto;
         }
         
         .blockleft {
             margin: 0 auto;
-            width: 200px;
+            width: 8vw;
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
         }
         
         .blockright {
             margin: 0 auto;   
+            width: 100%;
         }
         
         .bottominfo {
-            padding: 30px 15px 10px;
+            padding: 30px 10px;
             font-size: 20px;
             font-family: 'Courier New', Courier, monospace;
             color: rgb(73, 73, 73);
@@ -63,9 +65,9 @@
         }
         
         .divimg {
-            padding: 15px 15px;
-            height: 820px;
-            width: 490px;
+            padding: 0.5vw 0.5vw;
+            height: 45vw;
+            width: 25.5vw;
             overflow: hidden;
             float: left;
         }
@@ -84,7 +86,7 @@
         }
 
         .info{
-            padding: 15px 15px;
+            padding: 1vw 1vw;
             text-align: center;
             font-size: 20px;
             font-family: 'Courier New', Courier, monospace;

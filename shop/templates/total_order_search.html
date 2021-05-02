@@ -41,7 +41,7 @@
                         {% for page in totalorders.iter_pages() %}
                         {% if page %}
                         {% if page != totalorders.page %}
-                        <a href="{{ url_for('shop.allorder_search', page=page) }}">{{ page }}</a>
+                        <a href="{{ url_for('shop.total_order_search', page=page) }}">{{ page }}</a>
                         {% else %}
                         <strong>{{ page }}</strong>
                         {% endif %}
